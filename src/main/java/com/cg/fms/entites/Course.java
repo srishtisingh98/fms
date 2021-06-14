@@ -19,7 +19,7 @@ public class Course {
 	private String courseName;
 	@Column(name="Course_Description")
 	private String courseDescription;
-	@NotBlank
+	@Column(name = "No_Of_Days")
 	private int noOfDays;
 	
 	public Course() {

@@ -56,10 +56,16 @@ public class CourseController {
 	}
 
 	@ResponseStatus(code = HttpStatus.OK)
-	@GetMapping("/viewAll")
-	public List<Course> viewAllCourses(@RequestBody Course course) {
-		return courseService.viewAllCourses();
-	}
+//	@GetMapping("/all")
+//	public List<CourseDetails> viewAllCourses() {
+//		List<Course> course = courseService.viewAllCourses();
+//		return courseUtil.toDetails(course);
+//		
+		@GetMapping("/all")
+		public List<CourseDetails> viewAllCourses() {
+			return courseUtil.ToCourseDetailsList(courseService.viewAllCourses());
+		}
+
 
 	@GetMapping("/{id}")
 	public Course viewCourse(@PathVariable("id") int courseId) {

@@ -27,7 +27,7 @@ public class Program {
 //	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate endDate;
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 //	@JoinColumn(referencedColumnName = "courseId")
 	private List <Course> course;
 	@OneToOne(cascade = CascadeType.ALL)
@@ -37,7 +37,7 @@ public class Program {
 	public Program() {
 	}
 
-	public Program(int trainingId, LocalDate startDate, LocalDate endDate, List <Course> course, Employee faculty) {
+	public Program(int trainingId, LocalDate startDate, LocalDate endDate, List<Course> course, Employee faculty) {
 		this.trainingId = trainingId;
 		this.startDate = startDate;
 		this.endDate = endDate;

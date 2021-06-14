@@ -44,16 +44,24 @@ public class ProgramDetails {
 		this.faculty = faculty;
 	}
 	
-	public ProgramDetails(int trainingId, LocalDate startDate, LocalDate endDate, List <Course> course, Employee faculty) {
+//	public ProgramDetails(int trainingId, LocalDate startDate, LocalDate endDate, List <Course> course, Employee faculty) {
+//		
+//		this.trainingId = trainingId;
+//		this.startDate = startDate;
+//		this.endDate = endDate;
+//		this.course = course;
+//		this.faculty = faculty;
+//	}
+	public ProgramDetails(LocalDate startDate, LocalDate endDate, List <Course> course, Employee faculty) {
 		super();
-		this.trainingId = trainingId;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.course = course;
 		this.faculty = faculty;
 	}
-	public ProgramDetails(LocalDate startDate, LocalDate endDate, List <Course> course, Employee faculty) {
-		super();
+	public ProgramDetails(int trainingId, LocalDate startDate, LocalDate endDate, List<Course> course,
+			Employee faculty) {
+		this.trainingId = trainingId;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.course = course;

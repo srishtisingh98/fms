@@ -6,6 +6,7 @@ public class CourseDetails {
 	private String courseName;
 	private String courseDescription;
 	private int noOfDays;
+	
 	public int getCourseId() {
 		return courseId;
 	}

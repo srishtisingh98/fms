@@ -1,5 +1,6 @@
 package com.cg.fms.utility;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,6 +17,20 @@ public class CourseUtil {
 		CourseDetails cour = new CourseDetails(course.getCourseId(), course.getCourseName(), course.getCourseDescription(),
 				course.getNoOfDays());
 		return cour;
+	}
+//
+//	public List<CourseDetails> toDetails(List<Course> courses) {
+//		
+//		List<CourseDetails> crsDetails = new ArrayList<>();
+//		for (Course crs : courses) {
+//			crsDetails.add(ToCourseDetails(crs));
+//		}
+//		return crsDetails;
+//	}
+
+	public List<CourseDetails> ToCourseDetailsList(List<Course> viewAllCourses) {
+		List<CourseDetails> list = viewAllCourses.stream().map(p -> ToCourseDetails(p)).collect(Collectors.toList());
+		return list;
 	}
 
 }
